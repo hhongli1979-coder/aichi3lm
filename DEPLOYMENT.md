@@ -448,8 +448,10 @@ Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; 
 Ensure these headers are set:
 - `X-Frame-Options: SAMEORIGIN`
 - `X-Content-Type-Options: nosniff`
-- `X-XSS-Protection: 1; mode=block`
 - `Referrer-Policy: strict-origin-when-cross-origin`
+- `Permissions-Policy: geolocation=(), microphone=(), camera=()`
+
+**Note**: The X-XSS-Protection header is deprecated and should not be used as it can introduce vulnerabilities.
 
 ### 4. Dependency Auditing
 
